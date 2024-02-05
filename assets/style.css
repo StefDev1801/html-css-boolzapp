@@ -1,0 +1,27 @@
+/* #region Common*/
+body{
+    background-color: red;
+}
+/* #endregion */
+
+/* #region Utilities*/
+/* debug */
+/* #endregion */
+
+/* Region header????? */
+@media screen and (max-width: 991px) {
+    body{
+        background-color: blue;
+    }
+    
+}
+
+@media screen and (max-width: 540px) {
+    body{
+        background-color: purple;
+    }
+    
+}
+
+
+
