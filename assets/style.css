@@ -14,22 +14,48 @@ body{
 }
 .debug .left{
     width: 40vw;
-    height: 100px;
+    height: 90vh;
     background-color: aqua;
 }
 .debug .right{
     width: 40vw;
-    height: 100px;
+    height: 90vh;
     background-color: rebeccapurple;
+}
+.debug .left_header{
+    height: 20%;
+    background-color: brown;
+}
+.debug .left_main{
+    height: 80%;
+    background-color: burlywood;
+}
+.debug .right_header{
+    height: 10%;
+    background-color: green;
+}
+.debug .right_main{
+    height: 80%;
+    background-color: greenyellow;
+}
+.debug .right_footer{
+    height: 10%;
+    background-color: rgb(51, 128, 0);
 }
 /* #endregion */
 
-/* Region webapp? */
+/* #region webapp? */
 .background_fullscreen{
     display: flex;
     width: 80vw;
-    margin: auto;
+    margin: 5vh auto;
 }
+/* left */
+.left{
+    display: flex;
+    flex-direction: column;
+}
+/* right */
 /* #endregion */
 
 /* #region Media Queries*/
