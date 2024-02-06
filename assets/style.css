@@ -25,6 +25,7 @@ img{
     --bz-bg-profilepic:#f2f2f2;
     --bz-mymsg:#d5f9ba;
     --bz-friendmsg:#ffffff;
+    --bz-rightfooter:#f3eeea;
 }   
 .col-4{
     width: calc((100%/12)*4);
@@ -54,11 +55,10 @@ img{
     }
     .right_main{
         height: 80%;
-        background-color: greenyellow;
     }
     .right_footer{
         height: 10%;
-        background-color: rgb(51, 128, 0);
+     
     }
     .friend-msg, .my-msg{
         height: 100px;
@@ -192,6 +192,27 @@ body{
     position: absolute;
     bottom: 2px;
     right: 2px;
+}
+.right_main{
+    background-image: url(./img/mine.jpg);
+}
+.right_footer{
+    background-color: var(--bz-rightfooter);
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    gap: 0.5rem;
+    padding: 0.5rem;
+}
+.write-msg{
+    /* background-color: white; */
+    padding: 0.5rem;
+    width: 100%;
+    input{
+        width: 100%;
+        border-radius: 0.5rem;
+        padd
+    }
 }
 /* #endregion */
 
