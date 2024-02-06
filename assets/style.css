@@ -3,11 +3,23 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+.debug *{
     border: 1px dotted;
 }
 /* #endregion */
 
 /* #region Utilities*/
+:root{
+    --bz-bgfullscreen-top:#009688;
+    --bz-bgfullscreen-bottom:#dbdbd3;
+    --bz-bg-up:#eaeaea;
+    --bz-icons:#b1b1b1;
+    --bz-notification:#8edafc;
+    --bz-bg-profilepic:#f2f2f2;
+    --bz-mymsg:#d5f9ba;
+    --bz-friendmsg:#ffffff;
+}   
 .col-4{
     width: calc((100%/12)*4);
 }
