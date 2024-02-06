@@ -8,18 +8,20 @@
 /* #endregion */
 
 /* #region Utilities*/
+.col-4{
+    width: calc((100%/12)*4);
+}
+.col-8{
+    width: calc((100%/12)*8);
+}
 /* debug */
 body{
     background-color: red;
 }
 .debug .left{
-    width: 40vw;
-    height: 90vh;
     background-color: aqua;
 }
 .debug .right{
-    width: 40vw;
-    height: 90vh;
     background-color: rebeccapurple;
 }
 .debug .left_header{
@@ -42,6 +44,17 @@ body{
     height: 10%;
     background-color: rgb(51, 128, 0);
 }
+.debug .friend-msg,
+.debug .my-msg{
+    height: 100px;
+}
+.debug .friend-msg{
+    background-color: orange;
+}
+.debug .my-msg{
+    background-color: orangered;
+}
+
 /* #endregion */
 
 /* #region webapp? */
@@ -49,12 +62,19 @@ body{
     display: flex;
     width: 80vw;
     margin: 5vh auto;
+    /* potrei togliere le misure a left e right dandogli solo height 100%?? */
 }
 /* left */
 .left{
     display: flex;
     flex-direction: column;
+    height: 90vh;
 }
+.right{
+    height: 90vh;
+}
+
+
 /* right */
 /* #endregion */
 
@@ -63,14 +83,35 @@ body{
     body{
         background-color: blue;
     }
-    
+    .search_chat{
+        display: none;
+    }
+    .profile_insight{
+        display: none;
+    }
+    .background_fullscreen{
+        width: 100%;
+        margin: 0;
+    }
+    .left, .right{
+        height: 100vh;
+    }
+    .col-1{
+        width: calc(100%/12);
+    }
+    .col-11{
+        width: calc((100%/12)*11);
+    }
 }
 
 @media screen and (max-width: 540px) {
-    body{
-        background-color: purple;
+
+    .left{
+        display: none;
     }
-    
+    .col-12{
+        width: calc(100%);
+    }
 }
 /* #endregion */
 
