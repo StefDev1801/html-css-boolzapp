@@ -4,8 +4,12 @@
     padding: 0;
     box-sizing: border-box;
 }
-.debug *{
-    border: 1px dotted;
+
+img{
+    width: 100%;
+}
+.light_text{
+    color: #b1b1b1;
 }
 /* #endregion */
 
@@ -28,6 +32,9 @@
 }
 /* debug */
 .debug  {
+    *{
+        border: 1px dotted;
+    }
     .left{
         background-color: aqua;
     }
@@ -35,13 +42,10 @@
         background-color: rebeccapurple;
     }
     .left_header{
-        height: 20%;
+        /* height: 20%; */
         background-color: brown;
     }
-    .left_main{
-        height: 80%;
-        background-color: burlywood;
-    }
+    
     .right_header{
         height: 10%;
         background-color: green;
@@ -63,11 +67,12 @@
     .my-msg{
         background-color: orangered;
     }
-    .chat,.search_chat{
-        width: 100%;
-        height: 100px;
-        background-color: goldenrod;
+    
+    .current_chat{
+        background-color: red;
+        
     }
+    
 }
 /* #endregion */
 
@@ -86,6 +91,7 @@ body{
     /* potrei togliere le misure a left e right dandogli solo height 100%?? */
 }
 /* left */
+
 .left{
     display: flex;
     flex-direction: column;
@@ -93,14 +99,76 @@ body{
 }
 .left_main{
     overflow: scroll;
+    background-color: var(--bz-friendmsg);
 }
+.my_profile, .current_chat{
+    
+    justify-content: space-between;
+
+    display: flex;
+}
+.my_profile,
+.current_chat,
+.desktop_notification,
+.chat
+{
+    padding: 0.5rem;
+    height: 10vh;
+}
+.my-img{
+    aspect-ratio: 1;
+    img{
+        border-radius: 50% ;
+    }
+}
+.my_profile{
+    background-color: var(--bz-bg-up);
+
+}
+.desktop_notification,
+.chat,
+.name_hour,
+.search_chat{
+    display: flex;
+    flex-direction: row;
+}
+.name_hour{
+    justify-content: space-between;
+}
+.icon_text{
+    width: 100%;
+}
+.search_chat
+{
+    padding: 0.5rem;
+    gap: 1rem;
+}
+.desktop_notification{
+    background-color: var(--bz-notification);
+}
+/* 
+.debug {
+    .my-img{
+        width: 50px;
+        background-color: tomato;
+    }
+    .my_actions{
+        height: 100%;
+        width: 300px;
+    }
+}
+
+.my_actions{
+    display: flex;
+    justify-content: center;
+}
+ */
+
 /* right */
 .right{
+    /* need to add flex-grow: 1; */
     height: 90vh;
 }
-
-
-/* right */
 /* #endregion */
 
 /* #region Media Queries*/
