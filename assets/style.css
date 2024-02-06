@@ -1,3 +1,5 @@
+/* TODO:
+-remove right columns and use flex grow */
 /* #region Common*/
 *{
     margin: 0;
@@ -60,18 +62,11 @@ img{
     }
     .friend-msg, .my-msg{
         height: 100px;
+        width: 400px;
     }
-    .friend-msg{
-        background-color: orange;
-    }
-    .my-msg{
-        background-color: orangered;
-    }
+
     
-    .current_chat{
-        background-color: red;
-        
-    }
+
     
 }
 /* #endregion */
@@ -121,7 +116,8 @@ body{
         border-radius: 50% ;
     }
 }
-.my_profile{
+.my_profile,
+.current_chat{
     background-color: var(--bz-bg-up);
 
 }
@@ -168,8 +164,41 @@ body{
 .right{
     /* need to add flex-grow: 1; */
     height: 90vh;
+    flex-grow: 1;
+}
+.my-msg{
+    background-color: var(--bz-mymsg);
+    align-self: flex-end;
+}
+.friend-msg{
+    background-color: var(--bz-friendmsg);
+    align-self: flex-start;
+}
+.right_main{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    overflow: scroll;
+    padding: 2rem 4rem;
+}
+.my-msg,
+.friend-msg{
+    padding: 0.5rem;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+}
+.time{
+    position: absolute;
+    bottom: 2px;
+    right: 2px;
 }
 /* #endregion */
+
+
+
+
+
 
 /* #region Media Queries*/
 @media screen and (max-width: 991px) {
@@ -202,9 +231,9 @@ body{
     .left{
         display: none;
     }
-    .col-12{
+    /* .col-12{
         width: calc(100%);
-    }
+    } */
 }
 /* #endregion */
 
