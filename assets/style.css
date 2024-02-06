@@ -30,47 +30,47 @@
 body{
     background-color: red;
 }
-.debug .left{
-    background-color: aqua;
-}
-.debug .right{
-    background-color: rebeccapurple;
-}
-.debug .left_header{
-    height: 20%;
-    background-color: brown;
-}
-.debug .left_main{
-    height: 80%;
-    background-color: burlywood;
-}
-.debug .right_header{
-    height: 10%;
-    background-color: green;
-}
-.debug .right_main{
-    height: 80%;
-    background-color: greenyellow;
-}
-.debug .right_footer{
-    height: 10%;
-    background-color: rgb(51, 128, 0);
-}
-.debug .friend-msg,
-.debug .my-msg{
-    height: 100px;
-}
-.debug .friend-msg{
-    background-color: orange;
-}
-.debug .my-msg{
-    background-color: orangered;
-}
-.debug .chat,
-.debug .search_chat{
-    width: 100%;
-    height: 100px;
-    background-color: goldenrod;
+.debug  {
+    .left{
+        background-color: aqua;
+    }
+    .right{
+        background-color: rebeccapurple;
+    }
+    .left_header{
+        height: 20%;
+        background-color: brown;
+    }
+    .left_main{
+        height: 80%;
+        background-color: burlywood;
+    }
+    .right_header{
+        height: 10%;
+        background-color: green;
+    }
+    .right_main{
+        height: 80%;
+        background-color: greenyellow;
+    }
+    .right_footer{
+        height: 10%;
+        background-color: rgb(51, 128, 0);
+    }
+    .friend-msg, .my-msg{
+        height: 100px;
+    }
+    .friend-msg{
+        background-color: orange;
+    }
+    .my-msg{
+        background-color: orangered;
+    }
+    .chat,.search_chat{
+        width: 100%;
+        height: 100px;
+        background-color: goldenrod;
+    }
 }
 /* #endregion */
 
