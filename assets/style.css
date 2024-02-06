@@ -27,9 +27,6 @@
     width: calc((100%/12)*8);
 }
 /* debug */
-body{
-    background-color: red;
-}
 .debug  {
     .left{
         background-color: aqua;
@@ -75,6 +72,13 @@ body{
 /* #endregion */
 
 /* #region webapp? */
+body{
+    background: linear-gradient(
+        to top,
+        var(--bz-bgfullscreen-bottom) 70%,
+        var(--bz-bgfullscreen-top) 30%
+    );
+}
 .background_fullscreen{
     display: flex;
     width: 80vw;
