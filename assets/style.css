@@ -54,7 +54,12 @@ body{
 .debug .my-msg{
     background-color: orangered;
 }
-
+.debug .chat,
+.debug .search_chat{
+    width: 100%;
+    height: 100px;
+    background-color: goldenrod;
+}
 /* #endregion */
 
 /* #region webapp? */
@@ -70,6 +75,10 @@ body{
     flex-direction: column;
     height: 90vh;
 }
+.left_main{
+    overflow: scroll;
+}
+/* right */
 .right{
     height: 90vh;
 }
