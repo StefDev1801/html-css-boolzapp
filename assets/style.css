@@ -35,9 +35,9 @@ img{
 }
 /* debug */
 .debug  {
-    *{
+    /* *{
         border: 1px dotted;
-    }
+    } */
     .left{
         background-color: aqua;
     }
@@ -51,10 +51,7 @@ img{
     
     
     
-    .friend-msg, .my-msg{
-        height: 100px;
-        width: 400px;
-    }
+    
 
     
 
@@ -68,7 +65,7 @@ body{
         to top,
         var(--bz-bgfullscreen-bottom) 70%,
         var(--bz-bgfullscreen-top) 30%
-    );
+    )
 }
 .background_fullscreen{
     display: flex;
@@ -82,6 +79,10 @@ body{
     display: flex;
     flex-direction: column;
     height: 90vh;
+    @media (min-width: 990px ){
+    min-width: 350px;
+
+    }
 }
 .left_main{
     overflow: auto;
@@ -90,7 +91,6 @@ body{
 .my_profile, .current_chat{
     
     justify-content: space-between;
-
     display: flex;
 }
 .my_profile,
@@ -98,7 +98,7 @@ body{
 .desktop_notification,
 .chat
 {
-    padding: 0.5rem;
+    padding: 1rem;
     height: 100px;
     /* CHANGE */
 }
@@ -126,20 +126,46 @@ body{
 .search_chat{
     display: flex;
     flex-direction: row;
+
 }
 .name_hour{
     justify-content: space-between;
 }
 .icon_text{
     width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 .search_chat
 {
     padding: 0.5rem;
     gap: 1rem;
+    input{
+        width: 100%;
+        border: none;
+    }
+}
+input:focus-visible{
+    outline: none;
 }
 .desktop_notification{
     background-color: var(--bz-notification);
+}
+.bell{
+    aspect-ratio: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    padding: 0.5rem;
+    margin: 0.5rem;
+    font-size: 2rem;
+    background-color: var(--bz-friendmsg);
+    color: var(--bz-notification);
+}
+.chat{
+    border-bottom: 1px solid var(--bz-icons);
 }
 /* 
 .debug {
@@ -199,11 +225,17 @@ body{
     background-image: url(./img/mine.jpg);
     height: calc(100% - 150px);
 }
+.friend-msg, .my-msg{
+    width: 400px;
+    border-radius: 10px;
+    padding: 1rem;
+}
 .right_footer{
     background-color: var(--bz-rightfooter);
     height: 50px;
     display: flex;
     justify-content: center;
+    align-items: center;
     /* align-items: center; */
     gap: 0.5rem;
     padding: 0.5rem;
@@ -211,12 +243,13 @@ body{
 
 .write-msg{
     /* background-color: white; */
-    padding: 0.5rem;
+    /* padding: 0.5rem; */
     width: 100%;
     input{
         width: 100%;
         border-radius: 0.5rem;
-        padd
+        height: 2rem;
+        padding: 0.5rem;
     }
 }
 /* #endregion */
