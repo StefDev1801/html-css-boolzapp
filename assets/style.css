@@ -194,6 +194,7 @@ input:focus-visible{
 .my-msg{
     background-color: var(--bz-mymsg);
     align-self: flex-end;
+    position: relative;
 }
 .friend-msg{
     background-color: var(--bz-friendmsg);
@@ -249,6 +250,18 @@ input:focus-visible{
         width: 100%;
         border-radius: 0.5rem;
         height: 2rem;
+        padding: 0.5rem;
+        border: none;
+    }
+}
+.info_selection{
+    position: absolute;
+    right: 0.5rem;
+    top: 2rem;
+    z-index: 1;
+    background-color: white;
+    text-align: center;
+    .info_action{
         padding: 0.5rem;
     }
 }
