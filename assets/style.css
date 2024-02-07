@@ -49,17 +49,8 @@ img{
         background-color: brown;
     }
     
-    .right_header{
-        height: 10%;
-        background-color: green;
-    }
-    .right_main{
-        height: 80%;
-    }
-    .right_footer{
-        height: 10%;
-     
-    }
+    
+    
     .friend-msg, .my-msg{
         height: 100px;
         width: 400px;
@@ -93,7 +84,7 @@ body{
     height: 90vh;
 }
 .left_main{
-    overflow: scroll;
+    overflow: auto;
     background-color: var(--bz-friendmsg);
 }
 .my_profile, .current_chat{
@@ -108,7 +99,8 @@ body{
 .chat
 {
     padding: 0.5rem;
-    height: 10vh;
+    height: 100px;
+    /* CHANGE */
 }
 .my-img{
     aspect-ratio: 1;
@@ -120,6 +112,13 @@ body{
 .current_chat{
     background-color: var(--bz-bg-up);
 
+}
+.my_actions{
+    font-size: 2rem;
+    color: var(--bz-icons);
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
 }
 .desktop_notification,
 .chat,
@@ -178,7 +177,7 @@ body{
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    overflow: scroll;
+    overflow: auto;
     padding: 2rem 4rem;
 }
 .my-msg,
@@ -193,17 +192,23 @@ body{
     bottom: 2px;
     right: 2px;
 }
+.right_header{
+    height: 100px;
+}
 .right_main{
     background-image: url(./img/mine.jpg);
+    height: calc(100% - 150px);
 }
 .right_footer{
     background-color: var(--bz-rightfooter);
+    height: 50px;
     display: flex;
     justify-content: center;
     /* align-items: center; */
     gap: 0.5rem;
     padding: 0.5rem;
 }
+
 .write-msg{
     /* background-color: white; */
     padding: 0.5rem;
@@ -223,28 +228,29 @@ body{
 
 /* #region Media Queries*/
 @media screen and (max-width: 991px) {
-    body{
-        background-color: blue;
+    /* fai si che tutti questi diventino figli di left */
+    .left{
+
+        .search_chat,
+        .profile_insight,
+        .icon_text,
+        .desktop_notification,
+        .my_actions{
+            display: none;
+        }
+
     }
-    .search_chat{
-        display: none;
-    }
-    .profile_insight{
-        display: none;
-    }
-    .background_fullscreen{
-        width: 100%;
-        margin: 0;
-    }
-    .left, .right{
-        height: 100vh;
-    }
-    .col-1{
-        width: calc(100%/12);
-    }
-    .col-11{
-        width: calc((100%/12)*11);
-    }
+        .background_fullscreen{
+            width: 100%;
+            margin: 0;
+        }
+        .left, .right{
+            height: 100vh;
+        }
+        .left{
+            width: 100px;
+        }
+
 }
 
 @media screen and (max-width: 540px) {
